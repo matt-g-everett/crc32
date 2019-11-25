@@ -3,9 +3,9 @@
  * Invalid file names and files that cause errors are silently skipped.
  * The program reads from stdin if it is called with no arguments. */
 
-#include <stdio.h>
-#include <stdint.h>
 #include <stdlib.h>
+
+#include "iotp_crc32.h"
 
 uint32_t crc32_for_byte(uint32_t r) {
   for(int j = 0; j < 8; ++j)
